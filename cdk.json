@@ -1,5 +1,5 @@
 {
-  "app": "npx ts-node --prefer-ts-exts bin/cdk-workshop.ts",
+  "app": "pnpx ts-node --prefer-ts-exts bin/cdk-workshop.ts",
   "watch": {
     "include": [
       "**"
@@ -8,12 +8,13 @@
       "README.md",
       "cdk*.json",
       "**/*.d.ts",
-      "**/*.js",
       "tsconfig.json",
       "package*.json",
       "yarn.lock",
       "node_modules",
-      "test"
+      "test",
+      "jest.config.js",
+      "pnpm-lock.yaml"
     ]
   },
   "context": {
