@@ -23,6 +23,7 @@
     "@aws-sdk/client-dynamodb": "^3.569.0",
     "@aws-sdk/client-lambda": "^3.569.0",
     "aws-cdk-lib": "2.140.0",
+    "cdk-dynamo-table-viewer": "^0.2.488",
     "constructs": "^10.0.0"
   }
 }

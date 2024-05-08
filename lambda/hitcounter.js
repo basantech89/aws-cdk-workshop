@@ -7,7 +7,7 @@ const lambdaClient = new LambdaClient({ region: 'us-east-1' })
 const sendCommand = async (command, client) => {
   try {
     const result = await client.send(command)
-    console.log(JSON.stringify(result, null, 2));
+    return result
   } catch (e) {
     console.log(e);
   }
@@ -34,5 +34,6 @@ exports.handler = async function (event) {
 
   const { Payload } = await sendCommand(lambdaInvokeCommand, lambdaClient)
 
-  return Buffer.from(Payload).toString()
+  const data = JSON.parse(Buffer.from(Payload))
+  return data
 }
